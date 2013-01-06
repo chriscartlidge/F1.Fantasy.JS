@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script type="text/javascript" src="../../src/js/libs/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../../src/js/dataLoaders/cartlidge.f1.dataloaders.drivers.js"></script>
+		
+		<script type="text/javascript">
+			
+			var callback = function(data) {
+				// body...
+			}
+
+			var driverDataLoader = new Cartlidge.F1.DataLoader.Drivers($);
+			driverDataLoader.getDriverInformation('alonso', callback);
+
+		</script>
+	</body>
+</html>
