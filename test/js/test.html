@@ -2,16 +2,18 @@
 <html>
 	<body>
 		<script type="text/javascript" src="../../src/js/libs/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../../src/js/utils/cartlidge.f1.utils.js"></script>
 		<script type="text/javascript" src="../../src/js/dataLoaders/cartlidge.f1.dataloaders.drivers.js"></script>
 		
 		<script type="text/javascript">
 			
 			var callback = function(data) {
-				// body...
+				
+				alert(data.finishingPosition);
 			}
 
 			var driverDataLoader = new Cartlidge.F1.DataLoader.Drivers($);
-			driverDataLoader.getDriverInformation('alonso', callback);
+			driverDataLoader.getDriverRaceResults('alonso', 2007, 5, callback);
 
 		</script>
 	</body>

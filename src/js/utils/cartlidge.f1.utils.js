@@ -1,7 +1,7 @@
 window.Cartlidge = window.Cartlidge || {};
 window.Cartlidge.F1 = window.Cartlidge.F1 || {};
 
-window.Cartlidge.F1.Utils = function (jQuery) {
+window.Cartlidge.F1.utils = (function () {
 	'use strict';
 
 	var preconditions = {
@@ -14,12 +14,12 @@ window.Cartlidge.F1.Utils = function (jQuery) {
 
 	String.prototype.format = function () {
 		var args = arguments;
-		return this.replace(/{(\d+)}/g, function (match, number) { 
-		return typeof args[number] != 'undefined' ? args[number] : match;
+		return this.replace(/{(\d+)}/g, function (match, number) {
+			return typeof args[number] !== 'undefined' ? args[number] : match;
 		});
 	};
 
 	return {
 		preconditions : preconditions
 	};
-};
+}());
